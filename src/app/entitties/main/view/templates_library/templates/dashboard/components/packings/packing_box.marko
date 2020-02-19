@@ -1,0 +1,19 @@
+<if(data.isEdit === true)>
+  <div data-w-id="31092d1b-fe12-d9a5-9cd5-59498ed21473" data-wf-id="[&quot;31092d1b-fe12-d9a5-9cd5-59498ed21473&quot;]" class="packing-div-edit" id="${data.name}-${data.counter}">
+    <p data-w-id="31092d1b-fe12-d9a5-9cd5-59498ed21474" data-wf-id="[&quot;31092d1b-fe12-d9a5-9cd5-59498ed21474&quot;]" class="paragraph-72">PESO:</p>
+    <input class="packing-text-input-edit w-input" maxlength="256" name="weigth" data-name="Field 20" placeholder="?" data-w-id="31092d1b-fe12-d9a5-9cd5-59498ed21476" data-wf-id="[&quot;31092d1b-fe12-d9a5-9cd5-59498ed21476&quot;]" type="number" id="${data.name}-${data.counter}-weigth" required=""/>
+    <p data-w-id="31092d1b-fe12-d9a5-9cd5-59498ed21477" data-wf-id="[&quot;31092d1b-fe12-d9a5-9cd5-59498ed21477&quot;]" class="paragraph-73">KG</p>
+    <a data-w-id="31092d1b-fe12-d9a5-9cd5-59498ed21479" data-wf-id="[&quot;31092d1b-fe12-d9a5-9cd5-59498ed21479&quot;]" href="#" class="button-24 w-button" onclick="update_rawMaterial_packing(this.parentElement)">EDITAR</a>
+  </div>
+</if>
+<else>
+  <div data-w-id="31092d1b-fe12-d9a5-9cd5-59498ed2146b" data-wf-id="[&quot;31092d1b-fe12-d9a5-9cd5-59498ed2146b&quot;]" class="packing-div" id="${data.name}-${data.counter}" onclick="edit_rawMaterial_packing(this);">
+    <p data-w-id="31092d1b-fe12-d9a5-9cd5-59498ed2146c" data-wf-id="[&quot;31092d1b-fe12-d9a5-9cd5-59498ed2146c&quot;]" class="paragraph-72">PESO:</p>
+    <input class="packing-text-input-copy w-input" maxlength="256" name="weigth" data-name="Field 20" placeholder="?" data-w-id="31092d1b-fe12-d9a5-9cd5-59498ed2146e" data-wf-id="[&quot;31092d1b-fe12-d9a5-9cd5-59498ed2146e&quot;]" type="number" id="field-20" required=""/>
+    <div data-w-id="493beda7-79bc-c566-0408-64bd144faa80" data-wf-id="[&quot;493beda7-79bc-c566-0408-64bd144faa80&quot;]" class="div-block-90">
+      <p data-w-id="5a6a78da-0c7e-0816-55c3-e3dfcd6e6c0f" data-wf-id="[&quot;5a6a78da-0c7e-0816-55c3-e3dfcd6e6c0f&quot;]">${data.value}</p>
+    </div>
+    <p data-w-id="31092d1b-fe12-d9a5-9cd5-59498ed2146f" data-wf-id="[&quot;31092d1b-fe12-d9a5-9cd5-59498ed2146f&quot;]" class="paragraph-73">KG</p>
+    <a data-w-id="31092d1b-fe12-d9a5-9cd5-59498ed21471" data-wf-id="[&quot;31092d1b-fe12-d9a5-9cd5-59498ed21471&quot;]" href="#" class="button-24 w-button" onclick="delete_rawMaterial_packing(this.parentElement)">DELETAR</a>
+  </div>
+</else>
