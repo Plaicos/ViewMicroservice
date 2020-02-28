@@ -1,0 +1,47 @@
+<div class="div-block-26" id="plans">
+  <div>Tamanho de empresa: ${data.size}</div>
+  <div class="w-row">
+    <div class="w-col w-col-4">
+      <div>
+        <h4 class="heading-12">Trimestral</h4>
+        <div class="div-block-23"/>
+        <ul class="list-4">
+          <for (benefit in data.quarterly.benefits)>
+            <li>${benefit}</li>
+          </for>
+        </ul>
+        <div class="div-block-23"/>
+        <h1>R$ ${data.quarterly.price}</h1>
+      </div>
+      <a href="#" class="button-12 w-button" onclick="select_plan('quarterly')">SELECIONAR</a>
+    </div>
+    <div class="w-col w-col-4">
+      <div>
+        <h4 class="heading-12">Semestral</h4>
+        <div class="div-block-23"/>
+        <ul class="list-4">
+          <for (benefit in data.semianual.benefits)>
+            <li>${benefit}</li>
+          </for>
+        </ul>
+        <div class="div-block-23"/>
+        <h1>R$ ${data.semianual.price}</h1>
+      </div>
+      <a href="#" class="button-12 w-button" onclick="select_plan('semianual')">SELECIONAR</a>
+    </div>
+    <div class="w-col w-col-4">
+      <div>
+        <h4 class="heading-12">ANUAL</h4>
+        <div class="div-block-23"/>
+        <ul class="list-4">
+          <for (benefit in data.anual.benefits)>
+            <li>${benefit}</li>
+          </for>
+        </ul>
+        <div class="div-block-23"/>
+        <h1>R$ ${data.anual.price}</h1>
+      </div>
+      <a href="#" class="button-12 w-button" onclick="select_plan('anual')">SELECIONAR</a>
+    </div>
+  </div>
+</div>
