@@ -15,7 +15,7 @@ module.exports = class API {
         await Controller.initialize()
 
         let api = {
-           queue: Controller.queue()
+           get_template: Controller.get_template()
         }
         return Object.freeze(api)
     }

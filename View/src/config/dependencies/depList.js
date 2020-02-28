@@ -1,8 +1,9 @@
 module.exports = {
     Tools: new (require("./builders/Tools/Tools"))(),
-    DAO: new (require("./builders/DAO/DAObuilder"))(),
+    //DAO: new (require("./builders/DAO/DAObuilder"))(),
     Factories: new(require("./builders/Factory/Factories"))(),
-    SCI: new (require("./builders/SCI/SCI"))()
+    SCI: new (require("./builders/SCI/SCI"))(),
+    Library: new (require("./builders/Library/Library"))()
 }
 
 // var dependencies = {
