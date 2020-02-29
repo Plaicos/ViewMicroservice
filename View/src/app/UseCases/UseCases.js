@@ -11,7 +11,7 @@ module.exports = class UseCases {
 
     config_library() {
         let { Library } = this
-        let libs = require("../Templates/libs/libraries")
+        let libs = require("../templates/libs/libraries")
 
         try {
             Library.config(libs)
@@ -24,10 +24,6 @@ module.exports = class UseCases {
 
     get_template(params, selector, credential) {
         return new Promise(async (resolve, reject) => {
-            if (!credential) {
-                console.log(Error("CREDENTIAL IS MISSING"))
-                return reject("INTERNAL SERVER ERROR")
-            }
 
             let { DAO, SCI, Library, entities } = this
 
@@ -37,6 +33,30 @@ module.exports = class UseCases {
                 Template.pack()
 
                 resolve(Template)
+            }
+            catch (erro) {
+                reject(erro)
+            }
+        })
+    }
+
+    get_static_file(path) {
+        return new Promise(async (resolve, reject) => {
+            if (!path || typeof path !== "string") {
+                return reject("Path must be a valid string")
+            }
+
+            let { entities } = this
+            let root = ""
+            let file = new entities.File({ root, path })
+
+            try {
+                //buffer
+                file = file.load()
+                console.log("File in binary, array of bytes", file)
+                file.pack()
+                console.log("File has packed itself into a json", file)
+                resolve(file)
             }
             catch (erro) {
                 reject(erro)
