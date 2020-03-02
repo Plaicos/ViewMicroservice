@@ -9,7 +9,7 @@ async function initialize(dependencies) {
         let server = serverBuilder(service, api)
 
         server.start()
-        console.log("GRPC NOTIFIER SERVER RUNNING")
+        console.log("GRPC VIEW SERVER RUNNING")
         return
     }
     catch (erro) {
