@@ -1,6 +1,6 @@
 module.exports = {
     home: require("./home"),
-    sign_in: require("./sign_in"),
+    sign_up: require("./sign_up"),
     checkout: require("./checkout"),
     login: require("./login"),
     "404": require("./404")
