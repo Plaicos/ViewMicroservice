@@ -1,6 +1,6 @@
 module.exports = (dep) => {
     return new Promise(async (resolve, reject) => {
-        let template = require("../../../templates/home.marko")
+        let template = require("../../../templates/404.marko")
         let render_data = null
 
         try {
@@ -9,7 +9,7 @@ module.exports = (dep) => {
         }
         catch (erro) {
             reject(erro)
-            console.log("Render Error s", erro)
+            console.log("Render Error ", erro)
         }
     });
 
