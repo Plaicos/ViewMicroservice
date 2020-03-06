@@ -1,46 +1,46 @@
-module.exports = (_dependencies) => {
+module.exports = ({ SCI, credential }) => {
     return new Promise(async (resolve, reject) => {
-        let { cookie, params, dependencies } = _dependencies
-        let { actors } = dependencies
+
+        let supplier_template = require("../../../templates/dashboard/supplier_dashboard.marko")
+        let login_template = require("../../../templates/login.marko")
+        let config = {
+            level: 4,
+            scope: {
+                read: true,
+                write: true,
+                third_party: {
+                    read: false,
+                    write: false
+                }
+            }
+        }
+        let html = ""
+        let user = {}
 
         try {
-            let user = new actors.User({ dependencies, cookie })
-            let system = new actors.System(dependencies)
-
-            let data = {
-                user: await user.get_data(),
-                system: {
-                    origins: await system.get_origins(),
-                    applications: await system.get_applications(),
-                    locations: await system.get_locations(),
-                    made_in: await system.get_madeIn()
+            if (!credential) {
+                html = login_template.renderSync()
+            }
+            else {
+                try {
+                    await SCI.Authenticator.checkCredentialClearance(config, credential)
+                }
+                catch (erro) {
+                    html = login_template.renderSync()
                 }
             }
 
-            data.user.products = await user.get_products(data.user.login)
-            let raw_material_pagination = data.user.products.raw_material.pop()
-            let mixes_pagination = null
+            user = await SCI.User.get_user(credential.user, credential)
 
-            data.user.products.count = {
-                raw_material: raw_material_pagination.total
-            }
-            
-            //data.user.products.mixes.count = null
-
-            let response = {
-                template: require("../../../templates/dashboard/dashboard.marko"),
-                data: data
+            if (user.type === "supplier") {
+                html = supplier_template.renderSync(user)
             }
 
-            resolve(response);
-
-        } catch (erro) {
-            console.log(erro);
-            let response = {
-                template: require("../../../templates/login.marko"),
-                data: null
-            }
-            resolve(response)
+            resolve(html)
+        }
+        catch (erro) {
+            reject(erro)
+            console.log("Render Error s", erro)
         }
     });
 

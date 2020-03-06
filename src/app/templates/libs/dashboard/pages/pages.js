@@ -1,3 +1,3 @@
 module.exports = {
-    dashboard: require("./dashboard.js.js")
+    dashboard: require("./dashboard")
 }

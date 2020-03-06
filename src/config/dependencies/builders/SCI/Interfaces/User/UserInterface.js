@@ -5,7 +5,12 @@ module.exports = class UserInterface {
 
     get_user(login, credential) {
         return new Promise(async (resolve, reject) => {
-            this.Interface.User.get_user()
+            this.Interface.User.get_user({ login, credential }, (erro, data) => {
+                if (erro) {
+                    return reject(erro)
+                }
+                resolve(data)
+            })
         })
     }
 
