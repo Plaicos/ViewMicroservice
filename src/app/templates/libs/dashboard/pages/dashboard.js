@@ -20,6 +20,7 @@ module.exports = ({ SCI, credential }) => {
         try {
             if (!credential) {
                 html = login_template.renderSync()
+                return resolve(html)
             }
             else {
                 try {
@@ -27,6 +28,7 @@ module.exports = ({ SCI, credential }) => {
                 }
                 catch (erro) {
                     html = login_template.renderSync()
+                    return resolve(html)
                 }
             }
 
