@@ -12,6 +12,7 @@
     <script src="/public/assets/vendor/venobox/venobox.min.js"/>
     <script src="/public/assets/vendor/owl.carousel/owl.carousel.min.js"/>
     <script src="/public/assets/vendor/aos/aos.js"/>
+    <script src="/public/js/login/login.js"/>
     <!-- Template Main JS File -->
     <script src="/public/assets/js/main.js"/>
     <link href="/public/assets/css/cssLogin.css" rel="stylesheet"/>
@@ -103,13 +104,13 @@
         <br/>
         <h3 class="login-logo">Usuário</h3>
         <div class="form-group">
-          <input type="email" class="form-control" placeholder="Email *" value=""/>
+          <input type="email" class="form-control" placeholder="Email *" value="" id="login"/>
         </div>
         <div class="form-group">
-          <input type="password" class="form-control" placeholder="Senha *" value=""/>
+          <input type="password" class="form-control" placeholder="Senha *" value="" id="password"/>
         </div>
         <div class="form-group">
-          <input type="submit" class="btnSubmit1" value="Login"/>
+          <input type="submit" class="btnSubmit1" value="Login" onclick="login()"/>
         </div>
         <div class="form-group">
           <a href="#" class="btnForgetPwd">Esqueceu a senha?</a>
