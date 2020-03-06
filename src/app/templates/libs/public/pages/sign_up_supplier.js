@@ -1,15 +1,14 @@
-module.exports = (dep) => {
+module.exports = ({ }) => {
     return new Promise(async (resolve, reject) => {
-        let template = require("../../../templates/home.marko")
+        let template = require("../../../templates/sign_up_supplier.marko")
         let render_data = null
 
         try {
             let html = template.renderSync(render_data)
-            resolve(html)
+            resolve(html);
         }
         catch (erro) {
             reject(erro)
-            console.log("Render Error s", erro)
         }
     });
 
