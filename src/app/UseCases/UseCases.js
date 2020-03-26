@@ -13,7 +13,7 @@ module.exports = class UseCases {
 
     config_library() {
         let { Library } = this
-        let libs = require("../templates/libs/libraries")
+        let libs = require("../View/libs/libraries")
 
         try {
             Library.config(libs)
