@@ -1,88 +1,97 @@
 <!DOCTYPE html>
 <html lang="br">
-
-<head>
-  <meta charset="utf-8">
-
-  <title>Plaicos</title>
-
-  <!-- Vendor JS Files -->
-  <script src="/public/assets/vendor/jquery/jquery.min.js"></script>
-  <script src="/public/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="/public/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="/public/assets/vendor/php-email-form/validate.js"></script>
-  <script src="/public/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="/public/assets/vendor/venobox/venobox.min.js"></script>
-  <script src="/public/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="/public/assets/vendor/aos/aos.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="/public/assets/js/main.js"></script>
-
-  <link href="/public/assets/css/cssLogin.css" rel="stylesheet">
-  <link href="/public/assets/css/style.css" rel="stylesheet">
-  <link href="/public/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="/public/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-  <link href="/public/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-</head>
-
-<body style="background-color: #71B2AD;">
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top" style="background-color: #71B2AD;">
-    <div class="container-fluid d-flex">
-
-      <div class="logo mr-auto">
-        <h1 class="text-light"><a href="index.html"><span>Plaicos</span></a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+  <head>
+    <meta charset="utf-8"/>
+    <title>Plaicos</title>
+    <!-- Vendor JS Files -->
+    <script src="/public/assets/vendor/jquery/jquery.min.js"/>
+    <script src="/public/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"/>
+    <script src="/public/assets/vendor/jquery.easing/jquery.easing.min.js"/>
+    <script src="/public/assets/vendor/php-email-form/validate.js"/>
+    <script src="/public/assets/vendor/isotope-layout/isotope.pkgd.min.js"/>
+    <script src="/public/assets/vendor/venobox/venobox.min.js"/>
+    <script src="/public/assets/vendor/owl.carousel/owl.carousel.min.js"/>
+    <script src="/public/assets/vendor/aos/aos.js"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"/>
+    <!-- Template Main JS File -->
+    <script src="/public/assets/js/main.js"/>
+    <link href="/public/assets/css/cssLogin.css" rel="stylesheet"/>
+    <link href="/public/assets/css/style.css" rel="stylesheet"/>
+    <link href="/public/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/public/assets/vendor/icofont/icofont.min.css" rel="stylesheet"/>
+    <link href="/public/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet"/>
+  </head>
+  <body style="background-color: #71B2AD;">
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top" style="background-color: #71B2AD;">
+      <div class="container-fluid d-flex">
+        <div class="logo mr-auto">
+          <h1 class="text-light">
+            <a href="index.html">
+              <span>Plaicos</span>
+            </a>
+          </h1>
+          <!-- Uncomment below if you prefer to use an image logo -->
+          <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        </div>
+        <nav class="nav-menu d-none d-lg-block">
+          <ul>
+            <li class="active">
+              <a href="#header">Home</a>
+            </li>
+            <li>
+              <a href="#about">Marketplace</a>
+            </li>
+            <li>
+              <a href="#team">Equipe</a>
+            </li>
+            <li>
+              <a href="#portfolio">Blog</a>
+            </li>
+            <li>
+              <a href="#contact">Contato</a>
+            </li>
+            <li class="drop-down">
+              <a href="">Conta</a>
+              <ul>
+                <li>
+                  <a href="perfil.html">Perfil</a>
+                </li>
+                <li>
+                  <a href="dashboardFornecedor.html">Dashboard</a>
+                </li>
+                <li>
+                  <a href="#">Sair</a>
+                </li>
+              </ul>
+            </li>
+            <li class="get-started">
+              <a href="login.html">Login</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- .nav-menu -->
       </div>
-
-      <nav class="nav-menu d-none d-lg-block">
-        <ul>
-          <li class="active"><a href="#header">Home</a></li>
-          <li><a href="#about">Marketplace</a></li>
-          <li><a href="#team">Equipe</a></li>
-          <li><a href="#portfolio">Blog</a></li>
-          <li><a href="#contact">Contato</a></li>
-
-          <li class="drop-down"><a href="">Conta</a>
-            <ul>
-              <li><a href="perfil.html">Perfil</a></li>
-              <li><a href="dashboardFornecedor.html">Dashboard</a>
-              </li>
-              <li><a href="#">Sair</a></li>
-            </ul>
-          </li>
-
-
-          <li class="get-started"><a href="login.html">Login</a></li>
-        </ul>
-      </nav><!-- .nav-menu -->
-
+    </header>
+    <!-- End Header -->
+    <div class="login-container">
+      <div class="login-form-1">
+        <br/>
+        <h3 class="login-logo" style="margin-top: 30px;">Login</h3>
+        <div class="form-group">
+          <input type="email" class="form-control" placeholder="Email *" id="login" value=""/>
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" placeholder="Senha *" id="password" value=""/>
+        </div>
+        <div class="form-group">
+          <input type="button" class="btnSubmit1" value="Login" onlick="login()"/>
+        </div>
+        <div class="form-group">
+          <a href="#" class="btnForgetPwd">Esqueceu a senha???</a>
+        </div>
+      </div>
     </div>
-  </header><!-- End Header -->
-
-  <div class="login-container">
-    <div class="login-form-1">
-
-      <br>
-
-      <h3 class="login-logo" style="margin-top: 30px;">Login</h3>
-      <div class="form-group">
-        <input type="email" class="form-control" placeholder="Email *" value="" />
-      </div>
-      <div class="form-group">
-        <input type="password" class="form-control" placeholder="Senha *" value="" />
-      </div>
-      <div class="form-group">
-        <input type="submit" class="btnSubmit1" value="Login" />
-      </div>
-      <div class="form-group">
-        <a href="#" class="btnForgetPwd">Esqueceu a senha???</a>
-      </div>
-    </div>
-  </div>
-</body>
-
+  </body>
 </html>
