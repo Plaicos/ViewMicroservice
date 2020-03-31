@@ -38,23 +38,21 @@
               </div>
         
               <nav class="nav-menu d-none d-lg-block  navbar-expand"  >
-                <ul>
+                <ul style="margin-right:80px;">
                   <li class="active"><a href="index.html">Home</a></li>
                   <li><a href="index.html#team">Equipe</a></li>
                   <li><a href="index.html#portfolio">Blog</a></li>
                   <li><a href="index.html#contact">Contato</a></li>
-                  <li><a href="BalcaodeNegocios.html">Balcão de Negócios</a></li>
+                  <li><a href="#about">Balcão de Negócios</a></li>
         
-                 <!-- Navbar Search-->
-            <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
-                <div class="input-group">
-                    <input class="form-control" type="text" placeholder="Pesquise..." aria-label="Search" aria-describedby="basic-addon2" style="border-radius: 20px;"/>
-                    <div class="input-group-append">
-                        <button class="btn" style="background-color: #C05F7B; color: aliceblue; margin-right: 15px; border-radius: 20px; width: 40px;" type="button"><i class="fas fa-search"></i></button>
-                    </div>
-                </div>
-            </form>
-            <!-- Navbar-->
+                  <li class="drop-down"><a href="">Conta</a>
+                    <ul>
+                      <li><a href="perfil.html">Perfil</a></li>
+                      <li><a href="dashboardFornecedor.html">Dashboard</a>
+                      </li>
+                      <li><a href="#">Sair</a></li>
+                    </ul>
+                  </li>
     
                 </ul>     
                  
@@ -64,32 +62,12 @@
           </header><!-- End Header -->
 
         <div id="layoutSidenav" >
-            <div id="layoutSidenav_nav">
-                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion" style="margin-top: 72px; background-color: #8AC0BB;">
-                    <div class="sb-sidenav-menu">
-                        <div class="nav">
-                            <a class="nav-link" href="dashboardFornecedor.html"><div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Dashboard</a>
-                            <div class="sb-sidenav-menu-heading">Análises</div>
-                            <a class="nav-link" href="leadsForne.html" aria-expanded="false"><div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                Meus Leads
-                               </a>
-
-                               <a class="nav-link " href="GraficosForne.html" aria-expanded="false"><div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                                Meus Gráficos
-                               </a>
-
-                            
-                        </div>
-                    </div>
-                
-                </nav>
-            </div>
-            <div id="layoutSidenav_content">
+           
+      
                 <main> 
                         <div class="container-fluid">
                             <br>
-                            <h2 class="mt-4">Meus Leads</h2>
+                            <h2 style="margin-top: 80px;">Balcão de Negócios</h2>
                            <br>
                            <hr>
 
@@ -99,15 +77,15 @@
                                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                         <thead>
                                             <tr  style="color: #C05F7B;  background-color: aliceblue;">
-                                                <th>Empresa</th>
-                                                <th>Data pesquisa</th>
-                                                <th>Email do pesquisador</th>
-                                                <th>Usuário</th>
-                                                <th>Produto elencado</th>
-                                                <th>Solicita amostra</th>
-                                                <th>Solicita cotação</th>
+                                                <th>Categoria</th>
+                                                <th>Ação</th>
+                                                <th>Data do anúncio</th>
+                                                <th>Contato</th>
+                                                <th>E-mail</th>
+                                                <th>Produto / Serviço procurado</th>
+                                                <th>Produto / Serviço oferecido</th>
                                                 <th>Mensagem</th>
-                                                <th>Status</th>
+                                                <th>Prazo</th>
                                                 <th>Observação</th>
                                                 <th>Cidade</th>
                                                 <th>Estado</th>
@@ -115,15 +93,15 @@
                                         </thead>
                                         <tfoot>
                                             <tr style="color: #C05F7B; background-color: aliceblue;">
-                                                <th>Empresa</th>
-                                                <th>Data pesquisa</th>
-                                                <th>Email do pesquisador</th>
-                                                <th>Usuário</th>
-                                                <th>Produto elencado</th>
-                                                <th>Solicita amostra</th>
-                                                <th>Solicita cotação</th>
+                                                <th>Categoria</th>
+                                                <th>Ação</th>
+                                                <th>Data do anúncio</th>
+                                                <th>Contato</th>
+                                                <th>E-mail</th>
+                                                <th>Produto / Serviço procurado</th>
+                                                <th>Produto / Serviço oferecido</th>
                                                 <th>Mensagem</th>
-                                                <th>Status</th>
+                                                <th>Prazo</th>
                                                 <th>Observação</th>
                                                 <th>Cidade</th>
                                                 <th>Estado</th>
@@ -131,29 +109,29 @@
                                         </tfoot>
                                         <tbody>
                                             <tr>
-                                                <td>Tiger Nixon</td>
+                                                <td>n sei</td>
+                                                <td>oooooo</td>
                                                 <td>22/02/2020</td>
-                                                <td>Edinburgh@gmail.com</td>
                                                 <td>Tiger Nixon</td>
-                                                <td>mat 7</td>
+                                                <td>Edinburgh@gmail.com</td>
                                                 <td>Não</td>
                                                 <td>Sim</td>
-                                                <td>Favor enviar cotação urgente</td>
-                                                <td>Andamento</td>
+                                                <td>Favor enviar urgente</td>
+                                                <td>22/03/2020</td>
                                                 <td>Finalizar hoje</td>
                                                 <td>Curitiba</td>
                                                 <td>Parana</td>
                                             </tr>
                                             <tr>
-                                                <td>Tiger Nixon</td>
+                                                <td>n sei</td>
+                                                <td>oooooo</td>
                                                 <td>22/02/2020</td>
-                                                <td>Edinburgh@gmail.com</td>
                                                 <td>Tiger Nixon</td>
-                                                <td>mat 7</td>
+                                                <td>Edinburgh@gmail.com</td>
                                                 <td>Não</td>
                                                 <td>Sim</td>
-                                                <td>Favor enviar cotação urgente</td>
-                                                <td>Andamento</td>
+                                                <td>Favor enviar urgente</td>
+                                                <td>22/03/2020</td>
                                                 <td>Finalizar hoje</td>
                                                 <td>Curitiba</td>
                                                 <td>Parana</td>
