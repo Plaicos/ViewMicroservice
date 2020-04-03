@@ -1,4 +1,5 @@
 module.exports = class UseCases {
+
     constructor(dependencies) {
         this.dependencies = dependencies
         let { DAO, SCI, Library } = dependencies
@@ -8,10 +9,11 @@ module.exports = class UseCases {
         this.Library = Library
         this.entities = require("../Entities/entities")
     }
+    
 
     config_library() {
         let { Library } = this
-        let libs = require("../templates/libs/libraries")
+        let libs = require("../View/libs/libraries")
 
         try {
             Library.config(libs)
@@ -24,7 +26,7 @@ module.exports = class UseCases {
 
     get_template(params, selector, credential) {
         return new Promise(async (resolve, reject) => {
-
+            
             let { DAO, SCI, Library, entities } = this
 
             try {
