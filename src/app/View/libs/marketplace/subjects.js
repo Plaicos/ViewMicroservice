@@ -1,4 +1,4 @@
 module.exports = {
-    page: require("./page/pages.js.js"),
-    table: require("./table/tables.js.js")
+    page: require("./page/pages.js"),
+    //table: require("./table/tables.js")
 }

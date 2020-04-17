@@ -1,400 +1,173 @@
 <!DOCTYPE html>
-<!-- This site was created in Webflow. http://www.webflow.com -->
-<!-- Last Published: Tue Feb 04 2020 03:04:41 GMT+0000 (Coordinated Universal Time) -->
-<html data-wf-page="5dcb535bc74abf238df7fcc6" data-wf-site="5dcb535bc74abf03fdf7fcb7">
+<html lang="br">
   <head>
     <meta charset="utf-8"/>
-    <title>Projects</title>
-    <meta content="Projects" property="og:title"/>
-    <meta content="width=device-width, initial-scale=1" name="viewport"/>
-    <meta content="Webflow" name="generator"/>
-    <link href="/public/css/normalize.css" rel="stylesheet" type="text/css"/>
-    <link href="/public/css/webflow.css" rel="stylesheet" type="text/css"/>
-    <link href="/public//css/plaicos.webflow.css" rel="stylesheet" type="text/css"/>
-    <script src="/public/js/marketplace/marketplace.js" type="text/javascript"/>
-    <script src="/public/js/tools_pack.js" type="text/javascript"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"/>
-    <script type="text/javascript">WebFont.load({  google: {    families: ["Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"]  }});</script>
-    <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
-    <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
-    <link href="/public//images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-    <link href="/public//images/webclip.png" rel="apple-touch-icon"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <title>Dashboard</title>
+    <link href="assets/css/styles.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"/>
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon"/>
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"/>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i" rel="stylesheet"/>
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet"/>
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet"/>
+    <link href="assets/vendor/venobox/venobox.css" rel="stylesheet"/>
+    <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet"/>
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet"/>
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet"/>
   </head>
-  <body class="body">
-    <div data-collapse="medium" data-animation="default" data-duration="400" class="navigation-adm-dashboard w-nav">
-      <div class="navigation-wrap">
-        <a href="/" class="logo-link w-nav-brand">
-          <img src="/public/images/PLAICOS-LOGO.png" width="108" srcset="/public/images/PLAICOS-LOGO-p-500.png 500w, /public/images/PLAICOS-LOGO-p-800.png 800w, /public/images/PLAICOS-LOGO.png 1047w" sizes="107.99715423583984px" alt="" class="logo-image"/>
-        </a>
-        <div class="menu">
-          <nav role="navigation" class="navigation-items w-nav-menu">
-            <a href="/" class="navigation-item w-nav-link">HOMe</a>
-            <a href="../marketplace/marketplace.html" class="navigation-item w-nav-link w--current">marketplace</a>
-            <a href="../team.html" class="navigation-item w-nav-link">equipe</a>
-            <a href="../blog.html" class="navigation-item w-nav-link">Blog</a>
-            <a href="../contact.html" class="navigation-item w-nav-link">contato</a>
-            <a href="${data.links.view}?params=${data.links.web.public.sign_in}" class="nav-link w-nav-link">CADASTRE-SE</a>
-            <a href="${data.links.view}?params=${data.links.web.public.login}" class="nav-link-2 w-nav-link">LOGIN</a>
-          </nav>
-          <div class="menu-button w-nav-button">
-            <img src="/public/images/menu-icon_1menu-icon.png" width="22" alt="" class="menu-icon"/>
-          </div>
+  <body class="sb-nav-fixed">
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top" style="background-color: #71B2AD;">
+      <div class="container-fluid d-flex">
+        <div class="logo mr-auto">
+          <h1 class="text-light">
+            <a href="index.html">
+              <span>Plaicos</span>
+            </a>
+          </h1>
         </div>
-      </div>
-      <div data-delay="0" class="dropdown-2 w-dropdown">
-        <div class="dropdown-toggle-3 w-dropdown-toggle">
-          <div class="w-icon-dropdown-toggle"/>
-          <div>MINHA CONTA</div>
-        </div>
-        <nav class="dropdown-list w-dropdown-list">
-          <a href="#" class="w-dropdown-link">MEU PERFIL</a>
-          <a href="../dashboard/dashboard.html" class="w-dropdown-link">DASHBOARD</a>
-          <a href="#" class="w-dropdown-link">SAIR</a>
+        <nav class="nav-menu d-none d-lg-block  navbar-expand">
+          <ul style="margin-right:80px;">
+            <li class="active">
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="index.html#team">Equipe</a>
+            </li>
+            <li>
+              <a href="index.html#portfolio">Blog</a>
+            </li>
+            <li>
+              <a href="index.html#contact">Contato</a>
+            </li>
+            <li>
+              <a href="#about">Balcão de Negócios</a>
+            </li>
+            <li class="drop-down">
+              <a href="">Conta</a>
+              <ul>
+                <li>
+                  <a href="perfil.html">Perfil</a>
+                </li>
+                <li>
+                  <a href="dashboardFornecedor.html">Dashboard</a>
+                </li>
+                <li>
+                  <a href="#">Sair</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </nav>
+        <!-- .nav-menu -->
       </div>
-    </div>
-    <div class="section-3"/>
-    <div class="section-2">
-      <ul class="list-2 w-list-unstyled">
-        <li class="list-item-4">
-          <div data-delay="0" class="w-dropdown">
-            <div class="dropdown-toggle w-dropdown-toggle">
-              <div class="w-icon-dropdown-toggle"/>
-              <div>BUSCO POR</div>
-            </div>
-            <nav class="w-dropdown-list">
-              <a href="#" class="w-dropdown-link">MATERIAIS</a>
-              <a href="#" class="w-dropdown-link">PRODUTOS</a>
-            </nav>
-          </div>
-        </li>
-        <li class="list-item-2">
-          <a href="#" class="button-6 w-button">DESTAQUES</a>
-        </li>
-        <li class="list-item-2">
-          <a href="#" class="button-6 w-button">MAIS VENDIDOS</a>
-        </li>
-        <li class="list-item-2">
-          <a href="#" class="button-6 w-button">LIMITADOS</a>
-        </li>
-        <li class="list-item-2">
-          <a href="#" class="button-6 w-button">ANUNCIAR</a>
-        </li>
-        <li class="list-item-3"/>
-      </ul>
-    </div>
-    <div class="section-4">
-      <div class="div-block-99">
-        <div class="w-form">
-          <form id="search-filters" name="email-form-5" data-name="Email Form 5">
-            <div class="columns-8 w-row">
-              <div class="w-col w-col-6">
-                <label for="inci_name-2">inci name</label>
-                <input type="text" class="w-input" maxlength="256" name="inci_name" data-name="inci_name" id="inci_name-2" onkeyup="inci_name_suggestion_box('inci_name-2')"/>
-                <div id="product-listing-inci-name-suggestion" class="suggestion-box">
-                  <p class="paragraph-69">INCI NAME SUGESTION</p>
-                  <p class="paragraph-69">INCI NAME SUGESTION</p>
-                  <div class="loading-animation w-embed"/>
-                </div>
-                <label for="title">titulo do anúncio</label>
-                <input type="text" class="w-input" maxlength="256" name="title" data-name="title" placeholder="Example Text" id="title" required=""/>
-                <div class="div-block-107">
-                  <div class="div-block-108">
-                    <label for="origin">origem</label>
-                    <select id="origin" name="origin" data-name="origin" class="w-select">
-                      <option value="">Select one...</option>
-                      <for|i| of=data.system.origins>
-                        <option value="${i.origin}">${i.origin}</option>
-                      </for>
-                    </select>
-                  </div>
-                  <div class="div-block-109">
-                    <label for="user">usuario (login)</label>
-                    <input type="text" class="text-field-27 w-input" maxlength="256" name="user" data-name="user" placeholder="Example Text" id="user" required=""/>
-                  </div>
-                </div>
-                <div class="div-block-96">
-                  <label class="field-label-31">estado</label>
-                  <label for="state" class="field-label-28">cidade</label>
-                  <select id="state" name="state" data-name="state" class="select-field-9 w-select">
-                    <option value="">Estado</option>
-                    <for|i| of=data.system.locations.state>
-                      <option value="${i.name}">${i.name}</option>
-                    </for>
-                  </select>
-                  <select id="city" name="city" data-name="city" class="select-field-8 w-select">
-                    <option value="">Cidade</option>
-                    <for|i| of=data.system.locations.cities>
-                      <option value="${i.name}">${i.name}</option>
-                    </for>
-                  </select>
-                </div>
-                <label for="functions">funções</label>
-                <input type="text" class="w-input" maxlength="256" name="functions" data-name="functions" placeholder="Example Text" id="functions" required=""/>
-              </div>
-              <div class="w-col w-col-6">
-                <div class="div-block-106">
-                  <div class="div-block-104">
-                    <label for="type">tipo</label>
-                    <select id="type" name="type" data-name="type" class="w-select">
-                      <option value="">Select one...</option>
-                      <for|i| of=data.system.types>
-                        <option value="${i}">${i}</option>
-                      </for>
-                    </select>
-                  </div>
-                  <div class="div-block-105">
-                    <label for="application">aplicação</label>
-                    <select id="application" name="application" data-name="application" class="w-select">
-                      <option value="">Select one...</option>
-                      <for|i| of=data.system.applications>
-                        <option value="${i.name}">${i.name}</option>
-                      </for>
-                    </select>
-                  </div>
-                </div>
-                <div class="div-block-102">
-                  <div class="div-block-88">
-                    <label class="field-label-27">disponibilidade</label>
-                    <label class="radio-button-field-5 w-radio">
-                      <input type="radio" data-name="availability" id="always" name="availability" value="always" class="w-form-formradioinput w-radio-input"/>
-                      <span for="always" class="w-form-label">SEMPRE EM ESTOQUE</span>
-                    </label>
-                    <label class="w-radio">
-                      <input type="radio" data-name="availability" id="on_demand" name="availability" value="on_demand" class="w-form-formradioinput w-radio-input"/>
-                      <span for="on_demand" class="w-form-label">Sob ENCOMENDA</span>
-                    </label>
-                  </div>
-                  <div class="div-block-103">
-                    <label for="made_in" class="field-label-34">pais de fabricação</label>
-                    <select id="made_in" name="made_in" data-name="made_in" class="select-field-10 w-select">
-                      <option value="">Select one...</option>
-                      <for|i| of=data.system.made_in>
-                        <option value="${i.name}">${i.name}</option>
-                      </for>
-                    </select>
-                  </div>
-                </div>
-                <label for="manufacturer">fabricante</label>
-                <input type="text" class="w-input" maxlength="256" name="manufacturer" data-name="manufacturer" placeholder="Example Text" id="manufacturer" required=""/>
-                <div class="div-block-101">
-                  <label for="shelf_life" class="field-label-32">SHELF LIFE</label>
-                  <label for="shelf_life-2" class="field-label-33">lead time</label>
-                  <input type="number" class="text-field-26 w-input" maxlength="256" name="shelf_life" data-name="shelf_life" placeholder="Example Text" id="shelf_life-2" required=""/>
-                  <input type="number" class="text-field-25 w-input" maxlength="256" name="lead_time" data-name="lead_time" placeholder="Example Text" id="lead_time" required=""/>
-                </div>
-                <label for="free_from">livre dê</label>
-                <input type="text" class="w-input" maxlength="256" name="free_from" data-name="free_from" placeholder="Example Text" id="free_from" required=""/>
+    </header>
+    <!-- End Header -->
+    <div id="layoutSidenav">
+      <main>
+        <div class="container-fluid">
+          <br/>
+          <h2 style="margin-top: 80px;">Balcão de Negócios</h2>
+          <br/>
+          <hr/>
+          <div class="card mb-4">
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr style="color: #C05F7B;  background-color: aliceblue;">
+                      <th>Categoria</th>
+                      <th>Ação</th>
+                      <th>Data do anúncio</th>
+                      <th>Contato</th>
+                      <th>E-mail</th>
+                      <th>Produto / Serviço procurado</th>
+                      <th>Produto / Serviço oferecido</th>
+                      <th>Mensagem</th>
+                      <th>Prazo</th>
+                      <th>Observação</th>
+                      <th>Cidade</th>
+                      <th>Estado</th>
+                    </tr>
+                  </thead>
+                  <tfoot>
+                    <tr style="color: #C05F7B; background-color: aliceblue;">
+                      <th>Categoria</th>
+                      <th>Ação</th>
+                      <th>Data do anúncio</th>
+                      <th>Contato</th>
+                      <th>E-mail</th>
+                      <th>Produto / Serviço procurado</th>
+                      <th>Produto / Serviço oferecido</th>
+                      <th>Mensagem</th>
+                      <th>Prazo</th>
+                      <th>Observação</th>
+                      <th>Cidade</th>
+                      <th>Estado</th>
+                    </tr>
+                  </tfoot>
+                  <tbody>
+                    <tr>
+                      <td>n sei</td>
+                      <td>oooooo</td>
+                      <td>22/02/2020</td>
+                      <td>Tiger Nixon</td>
+                      <td>Edinburgh@gmail.com</td>
+                      <td>Não</td>
+                      <td>Sim</td>
+                      <td>Favor enviar urgente</td>
+                      <td>22/03/2020</td>
+                      <td>Finalizar hoje</td>
+                      <td>Curitiba</td>
+                      <td>Parana</td>
+                    </tr>
+                    <tr>
+                      <td>n sei</td>
+                      <td>oooooo</td>
+                      <td>22/02/2020</td>
+                      <td>Tiger Nixon</td>
+                      <td>Edinburgh@gmail.com</td>
+                      <td>Não</td>
+                      <td>Sim</td>
+                      <td>Favor enviar urgente</td>
+                      <td>22/03/2020</td>
+                      <td>Finalizar hoje</td>
+                      <td>Curitiba</td>
+                      <td>Parana</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
-            <div class="div-block-97">
-              <label class="field-label-29">paginação da mesa</label>
-              <label for="limit-2" class="field-label-30">limit</label>
-              <input type="number" class="prosucts-table-filters-pagination w-input" maxlength="256" name="limit" data-name="limit" placeholder="Example Text" id="limit-2" required=""/>
-              <label for="offset" class="field-label-30">OFFSET:</label>
-              <input type="number" class="prosucts-table-filters-pagination w-input" maxlength="256" name="offset" data-name="offset" placeholder="Example Text" id="prosucts-table-filters-pagination" required=""/>
-            </div>
-            <a href="#" class="button-26 w-button" onclick="Search()">ATUALIZAR</a>
-          </form>
-          <div class="w-form-done">
-            <div>Thank you! Your submission has been received!</div>
-          </div>
-          <div class="w-form-fail">
-            <div>Oops! Something went wrong while submitting the form.</div>
           </div>
         </div>
-        <div class="w-form">
-          <form id="filters-toggle" name="email-form" data-name="Email Form">
-            <div class="div-block-100">
-              <p class="paragraph-82">SELECIONE OS CAMPOS QUE DESEJA VIZUALISAR (BETA)</p>
-              <label class="w-checkbox">
-                <input type="checkbox" id="checkbox-2" name="checkbox-2" data-name="Checkbox 2" class="w-checkbox-input"/>
-                <span class="w-form-label">nome</span>
-              </label>
-              <label class="w-checkbox">
-                <input type="checkbox" id="checkbox" name="checkbox" data-name="Checkbox" class="w-checkbox-input"/>
-                <span class="w-form-label">localização</span>
-              </label>
-              <label class="w-checkbox">
-                <input type="checkbox" id="checkbox-2" name="checkbox-2" data-name="Checkbox 2" class="w-checkbox-input"/>
-                <span class="w-form-label">fabricante</span>
-              </label>
-              <label class="w-checkbox">
-                <input type="checkbox" id="Inci Name" name="Inci-Name" data-name="Inci Name" class="w-checkbox-input"/>
-                <span for="Inci Name" class="w-form-label">origem</span>
-              </label>
-              <label class="w-checkbox">
-                <input type="checkbox" id="checkbox-3" name="checkbox-3" data-name="Checkbox 3" class="w-checkbox-input"/>
-                <span class="w-form-label">pais de fab</span>
-              </label>
-              <label class="w-checkbox">
-                <input type="checkbox" id="checkbox-4" name="checkbox-4" data-name="Checkbox 4" class="w-checkbox-input"/>
-                <span class="w-form-label">aplicação</span>
-              </label>
-              <label class="w-checkbox">
-                <input type="checkbox" id="checkbox-5" name="checkbox-5" data-name="Checkbox 5" class="w-checkbox-input"/>
-                <span class="w-form-label">tipo</span>
-              </label>
-              <label class="w-checkbox">
-                <input type="checkbox" id="checkbox-6" name="checkbox-6" data-name="Checkbox 6" class="w-checkbox-input"/>
-                <span class="w-form-label">shelf life</span>
-              </label>
-            </div>
-          </form>
-          <div class="w-form-done">
-            <div>Thank you! Your submission has been received!</div>
-          </div>
-          <div class="w-form-fail">
-            <div>Oops! Something went wrong while submitting the form.</div>
-          </div>
-        </div>
-      </div>
+      </main>
+      <footer class="py-4 bg-light mt-auto">
+        <div class="container-fluid"/>
+      </footer>
     </div>
-    <div id="search-result" class="section-13">
-      <div class="t-head">
-        <div class="header-row">
-          <div class="field">
-            <p>
-              <span class="text-span-17">INCI NAME</span>
-            </p>
-          </div>
-          <div class="field">
-            <p>TITULO</p>
-          </div>
-          <div class="field">
-            <p>CIDADE</p>
-          </div>
-          <div class="field">
-            <p>
-              <span class="text-span-17">ESTADO</span>
-            </p>
-          </div>
-          <div class="field">
-            <p>
-              <span class="text-span-17">LEAD TIME</span>
-            </p>
-          </div>
-          <div class="field">
-            <p>ORIGEM</p>
-          </div>
-          <div class="field">
-            <p>DISPONIBILIDADE</p>
-          </div>
-          <div class="field">
-            <p>
-              <span class="text-span-17">APLICAÇÃO</span>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="t-body">
-        <div class="row">
-          <div class="field">
-            <p>GLASS</p>
-          </div>
-          <div class="field">
-            <p>Vidro Temperado?</p>
-          </div>
-          <div class="field">
-            <p>São Paulo</p>
-          </div>
-          <div class="field">
-            <p>
-              <span class="text-span-17">São Paulo</span>
-            </p>
-          </div>
-          <div class="field">
-            <p>4 dias</p>
-          </div>
-          <div class="field">
-            <p>Animal</p>
-          </div>
-          <div class="field">
-            <p>Em Estoque</p>
-          </div>
-          <div class="field">
-            <p>
-              <span class="text-span-17">Janelas</span>
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="field">
-            <p>GLASS</p>
-          </div>
-          <div class="field">
-            <p>Vidro Temperado?</p>
-          </div>
-          <div class="field">
-            <p>São Paulo</p>
-          </div>
-          <div class="field">
-            <p>
-              <span class="text-span-17">São Paulo</span>
-            </p>
-          </div>
-          <div class="field">
-            <p>4 dias</p>
-          </div>
-          <div class="field">
-            <p>Animal</p>
-          </div>
-          <div class="field">
-            <p>Em Estoque</p>
-          </div>
-          <div class="field">
-            <p>
-              <span class="text-span-17">Janelas</span>
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="field">
-            <p>GLASS</p>
-          </div>
-          <div class="field">
-            <p>Vidro Temperado?</p>
-          </div>
-          <div class="field">
-            <p>São Paulo</p>
-          </div>
-          <div class="field">
-            <p>
-              <span class="text-span-17">São Paulo</span>
-            </p>
-          </div>
-          <div class="field">
-            <p>4 dias</p>
-          </div>
-          <div class="field">
-            <p>Animal</p>
-          </div>
-          <div class="field">
-            <p>Em Estoque</p>
-          </div>
-          <div class="field">
-            <p>
-              <span class="text-span-17">Janelas</span>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="error-notification" class="error-notification">
-      <p class="paragraph-75">ERRO NA MATRIX</p>
-      <p id="error-notification-message" class="paragraph-76">SEARCH PARAMS MUST BE AN OBJECT</p>
-      <p class="paragraph-77">
-        STATUS:
-        <span id="error-notification-status" class="text-span-14">400</span>
-      </p>
-    </div>
-    <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"/>
-    <script src="/public/js/webflow.js" type="text/javascript"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.1/axios.min.js" type="text/javascript"/>
-    
-    <div id="main_server_link" value="${data.links.main}"/>
-    <div id="view_server_link" value="${data.links.view}"/>
-    <div id="marketplace_server_link" value="${data.links.marketplace}"/>
-    <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"/>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"/>
+    <script src="js/scripts.js"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"/>
+    <script src="assets/demo/chart-area-demo.js"/>
+    <script src="assets/demo/chart-area-forne.js"/>
+    <script src="assets/demo/chart-bar-demo.js"/>
+    <script src="assets/demo/chart-bar-forne.js"/>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"/>
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"/>
+    <script src="assets/demo/datatables-demo.js"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"/>
+    <script src="assets/demo/chart-area-demo.js"/>
+    <script src="assets/demo/chart-bar-demo.js"/>
+    <script src="assets/demo/chart-pie-demo.js"/>
   </body>
 </html>
