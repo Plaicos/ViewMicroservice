@@ -1,6 +1,6 @@
 module.exports = ({ SCI, credential }) => {
     return new Promise(async (resolve, reject) => {
-
+        console.log("+++++++++++")
         let supplier_template = require("../../../templates/dashboard/supplier_dashboard.marko")
         let third_party_template = require("../../../templates/dashboard/third_party_dashboard.marko")
         let login_template = require("../../../templates/public/pages/login.marko")
